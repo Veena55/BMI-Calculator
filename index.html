@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+    <script>
+        function addDarkmodeWidget() {
+            new Darkmode().showWidget();
+        }
+        window.addEventListener('load', addDarkmodeWidget);
+    </script>
+</head>
+
+<body>
+    <div class="bmi_calculator">
+        <div id="bmi">
+            <div>
+                <h2 class="title">BMI Calculator</h2>
+                <img src="">
+            </div>
+            <p class="description">Body Mass Index (BMI) is a measureof body fat based on height and weight that applies
+                to
+                men and women</p>
+            <div class="gender">
+                <div>
+                    <div id="male" onclick="selectGender('male')">
+                        <img src="./images/male.svg" alt="freepik_image">
+                    </div>
+                    <p>Male</p>
+                </div>
+                <div>
+                    <div id="female" onclick="selectGender('female')">
+                        <img src="./images/female.svg" alt="freepik_image">
+                    </div>
+                    <p>Female</p>
+                </div>
+            </div>
+            <div class="cards">
+                <div>
+                    <div class="icon">
+                        <img src="./images/age.png" alt="" width="30">
+                    </div>
+                </div>
+                <div class="age">
+                    <input type="number" name="" class="inputField" placeholder="Enter your age" id="age">
+                    <label>yrs</label>
+                </div>
+            </div>
+            <div class="cards">
+                <div>
+                    <div class="icon">
+                        <img src="./images/height-blue.png" alt="" width="30">
+                    </div>
+                </div>
+                <div class="height">
+                    <input type="number" name="" class="inputField" placeholder="Enter feet" id="height-in-feet">
+                    <input type="number" name="" class="inputField" placeholder="Enter inches" id="height-in-inch">
+                    <label>ft/inch</label>
+                </div>
+            </div>
+            <div class="cards">
+                <div>
+                    <div class="icon">
+                        <img src="./images/weight-blue.png" alt="" width="30">
+                    </div>
+                </div>
+                <div class="weight">
+                    <input type="number" name="" class="inputField" placeholder="Enter your weight" id="weight">
+                    <label>kg</label>
+                </div>
+            </div>
+
+            <div class="calculate">
+                <button onclick="total()">Calculate your BMI <span><img src="./images/arrow-right-white.png"
+                            alt=""></span>
+                </button>
+            </div>
+        </div>
+
+
+        <!-- Result -->
+        <div id="result">
+            <h2 class="title">Your Summary</h2>
+            <div class="resultCard">
+                <h3 class="resultTitle">Your BMI is</h3>
+                <p id="resultValue">22.3</p>
+                <p class="unit">kg/m<sup>2</sup></p>
+                <!-- <div class="progress" style="width: 100%;height: 10px;">
+                    <div class="progress-bar"
+                        style="width: 70%; background-color: red; height: 10px;border-top-left-radius: 12px;border-bottom-left-radius: 12px;">
+                    </div>
+                    <div class="progress-bar" style="width: 80%; background-color: yellow; height: 10px;">
+                    </div>
+                    <div class="progress-bar"
+                        style="width: 80%; background-color: green; height: 10px;border-top-right-radius: 12px;border-bottom-right-radius: 12px;">
+                    </div>
+                </div> -->
+                <div style="margin-top: 1rem;">
+                    <p style="padding-bottom:1rem;font-size:1.2rem;color: var(--contentColor);">Your are <span
+                            style="color: var(--appColor);font-weight: 500;" id="bmiCategory">
+                        </span>
+                    </p>
+                </div>
+            </div>
+            <div class="info">
+                <div>
+                    <p id="user_details">User Details:</p>
+                    <p class="user_data">Gender: <span id="gender"></span></p>
+                    <p class="user_data">Age: <span id="ageVal"></span></p>
+                    <p class="user_data">BMI: <span id="bmiVal"></span></p>
+                    <p class="user_data">You are <span id="health"></span></p>
+
+                </div>
+                <p>
+                    Healthy BMI range: 18.5kg/m<sup>2</sup>
+                </p>
+                <p>
+                    Healthy Weight for the height: 56.7kgs - 76.6kgs
+                </p>
+                <p>
+                    Ponderal Index: 13.1 kg/m<sup>3</sup>
+                </p>
+            </div>
+            <div style="text-align: center;padding: 2rem 0;">
+                <div class="share-icon">
+                    <a id="share" onclick="shareOnWhatsApp()"><img src="./images/share.png" alt="" width="30"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

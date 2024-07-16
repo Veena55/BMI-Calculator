@@ -1,0 +1,224 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e9eaf0;
+}
+
+:root {
+    --appColor: #38bbfd;
+    --contentColor: #6b6b6b;
+}
+
+.bmi_calculator {
+    width: 500px;
+    margin: 2rem auto;
+    border-radius: 30px;
+    background: #e9eaf0;
+    box-shadow: 6px 5px 12px #cbcbcb;
+    padding: 1rem 2rem;
+}
+
+.bmi_calculator .title {
+    color: var(--appColor);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.bmi_calculator .description {
+    text-align: justify;
+    color: var(--contentColor);
+    font-size: 1.1rem;
+    padding: 1rem 0;
+}
+
+.bmi_calculator .gender {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 1rem;
+}
+
+.bmi_calculator .gender #male,
+.bmi_calculator .gender #female {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+    background: #e9eaf0;
+    box-shadow: 6px 5px 12px #9e9d9d;
+    margin: auto;
+    padding: .5rem;
+    padding-bottom: 0;
+}
+
+.bmi_calculator .gender #male img,
+.bmi_calculator .gender #female img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 100%;
+}
+
+.bmi_calculator .gender p,
+.bmi_calculator .gender p {
+    color: var(--contentColor);
+    text-align: center;
+    font-size: 1.1rem;
+    padding: .5rem 0;
+}
+
+.bmi_calculator .cards {
+    background-color: #e9eaf0;
+    /* box-shadow: 6px 5px 12px rgba(0, 106, 255, 0.2); */
+    ;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 2px solid var(--appColor);
+}
+
+
+
+.bmi_calculator .cards .icon {
+    box-shadow: 6px 5px 12px rgba(0, 106, 255, 0.2);
+    padding: 10px;
+    border-radius: 12px;
+    display: flex;
+    /* background-color: rgba(0, 106, 255, 0.334); */
+    ;
+}
+
+.bmi_calculator .cards .card_title {
+    color: var(--contentColor);
+    padding: .8rem;
+}
+
+.bmi_calculator .cards input {
+    width: 100%;
+    border: none;
+    padding: .8rem;
+    color: var(--appColor);
+    border-radius: 10px;
+    background-color: none;
+    font-weight: bold;
+
+}
+
+.bmi_calculator .cards .age,
+.height,
+.weight {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bmi_calculator .cards .inputField {
+    width: 100%;
+}
+
+.bmi_calculator .cards input:focus {
+    outline: none;
+}
+
+.bmi_calculator .calculate button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background: linear-gradient(to top right, cyan, var(--appColor));
+    width: 100%;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 2px 2px 20px rgba(0, 106, 255, 0.334);
+    padding: .3rem;
+    color: white;
+    font-size: 1.2rem;
+}
+
+.bmi_calculator .calculate button:hover {
+    box-shadow: 0 0 5px 10px rgba(0, 106, 255, 0.2);
+    transition: all 500ms;
+}
+
+.bmi_calculator .resultCard .resultTitle {
+    text-align: center;
+    color: var(--contentColor);
+}
+
+.bmi_calculator .resultCard {
+    background-color: #e9eaf0;
+    box-shadow: 6px 5px 12px rgba(0, 106, 255, 0.2);
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.bmi_calculator .resultCard #resultValue {
+    font-weight: bold;
+    color: var(--appColor);
+    font-size: 3rem;
+    padding: .5rem 0;
+}
+
+.bmi_calculator .resultCard .unit {
+    font-weight: 500;
+    color: var(--contentColor);
+}
+
+.bmi_calculator .progress {
+    height: 20px;
+    width: 100%;
+    border-radius: 12px;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    margin: 1rem 0;
+}
+
+.info {
+    padding: 1rem;
+}
+
+.info p {
+    color: rgb(139, 138, 138);
+    /* font-size: 1.2rem; */
+    padding: .5rem;
+    text-align: justify;
+}
+
+.share-icon {
+    box-shadow: 6px 5px 12px rgba(0, 106, 255, 0.2);
+    padding: 10px;
+    border-radius: 12px;
+    display: inline-flex;
+    justify-content: center;
+}
+
+#result {
+    display: none;
+}
+
+#user_details {
+    text-decoration: underline;
+    font-weight: 500;
+}
+
+.user_data {
+    font-weight: bold;
+}
+
+.gender-active {
+    outline: 5px solid var(--appColor);
+    outline-offset: 5px;
+}
